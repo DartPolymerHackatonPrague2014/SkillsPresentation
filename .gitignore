@@ -21,3 +21,6 @@ packages
 
 # Include when developing application packages.
 pubspec.lock
+
+#data
+web/data.json
