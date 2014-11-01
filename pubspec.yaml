@@ -1,0 +1,8 @@
+name: skills
+description: Skills presentation
+dependencies:
+    polymer: ">=0.14.0"
+    paper_elements: ">=0.5.0"
+transformers:
+- polymer:
+    entry_points: web/skills.html
