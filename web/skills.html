@@ -10,12 +10,16 @@
     <script src="packages/web_components/platform.js"></script>
     <link rel="import" href="packages/paper_elements/paper_slider.html">
     <link rel="import" href="packages/paper_elements/paper_input.html">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
     
     <link rel="stylesheet" href="skills.css">
   </head>
-  <body>
+  <body class="container">
     <h1>Skills</h1>
-    <form>
+    <form id="filterForm">
       <paper-input id="skillFilter" label="Find Skills"></paper-input>
     </form>
     <div id="skills"></div>

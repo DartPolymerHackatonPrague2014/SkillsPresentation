@@ -1,0 +1,17 @@
+[
+   { 
+    "name": "git",
+    "tags": ["pull", "merge", "commit"],
+    "knowledge": 100
+   },
+   {
+    "name": "dart",
+    "tags": ["canvas", "DOM"],
+    "knowledge": 50
+   },
+   {
+    "name": "polymer",
+    "tags": ["elements"],
+    "knowledge": 75
+   }
+]

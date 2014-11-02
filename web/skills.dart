@@ -28,6 +28,13 @@ void main() {
   });
 }
 
+int compareSkills(var x, var y) {
+  int ix = x["knowledge"];
+  int iy = y["knowledge"];
+  
+  return ix.compareTo(iy);
+}
+
 void showSkills(String filt) {
   var skills = querySelector("#skills");
   //clear elements
@@ -35,25 +42,43 @@ void showSkills(String filt) {
 
   int cnt = 0;
 
+  data.sort((x, y) => compareSkills(x, y));
+      
+
   for (var e in data) {
     var tagContains = false;
-    
+
     for (var t in e["tags"]) {
-      if(t.toString().contains(filt)) {
+      if (t.toString().contains(filt)) {
         tagContains = true;
         break;
       }
     }
-    
+
     if (e["name"].contains(filt) || tagContains) {
-      Element container = new Element.tag('div');
+      Element container = new Element.tag('div')..attributes = {
+            "class": "col-md-4"
+          };
+      
+      Element skill = new Element.tag('div')..attributes = {
+            "class": "skill"
+          };
+      
       Element name = new Element.tag('h2')
           ..text = e["name"].toString()
           ..attributes = {
             "class": "name"
           };
-      container.append(name);
-      
+      skill.append(name);
+
+      Element slider = new Element.tag('paper-progress')..attributes = {
+            "value": "0",
+            "data-value": e["knowledge"].toString()
+          };
+      skill.append(slider);
+
+      var future = new Future.delayed(const Duration(milliseconds: animationTime), animateProgress);
+
       Element tags = new Element.tag('div');
       for (var t in e["tags"]) {
         Element tag = new Element.tag('span')
@@ -63,17 +88,9 @@ void showSkills(String filt) {
             };
         tags.append(tag);
       }
-      container.append(tags);
+      skill.append(tags);
 
-      Element slider = new Element.tag('paper-progress')..attributes = {
-            "value": "0",
-            "data-value": e["knowledge"].toString()
-
-          };
-      container.append(slider);
-
-      var future = new Future.delayed(const Duration(milliseconds: animationTime), animateProgress);
-
+      container.append(skill);
       skills.append(container);
       cnt++;
     }

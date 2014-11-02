@@ -1,13 +1,27 @@
-body {
-  background-color: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin: 15px;
+.tag {
+  padding: 4px 6px;
+  margin: 2px 4px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  font-size: 10px;
+  display: inline-block;
 }
 
-.tag {
-  padding: 0 8px;
+.name {
+  margin: 0;
+}
+
+.skill {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#filterForm {
+  margin-bottom: 22px;
+}
+
+#filterForm paper-input{
+  margin: 0 auto;
 }
 
