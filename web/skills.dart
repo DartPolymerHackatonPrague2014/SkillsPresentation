@@ -57,7 +57,7 @@ void showSkills(String filt) {
 
     if (e["name"].contains(filt) || tagContains) {
       Element container = new Element.tag('div')..attributes = {
-            "class": "col-md-4"
+            "class": "col-xs-6"
           };
       
       Element skill = new Element.tag('div')..attributes = {

@@ -15,6 +15,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     padding: 10px;
     border-radius: 6px;
+    margin-bottom: 12px;
 }
 
 #filterForm {
@@ -23,5 +24,9 @@
 
 #filterForm paper-input{
   margin: 0 auto;
+}
+
+paper-progress {
+  width: 100%;
 }
 
