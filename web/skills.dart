@@ -32,7 +32,7 @@ int compareSkills(var x, var y) {
   int ix = x["knowledge"];
   int iy = y["knowledge"];
   
-  return ix.compareTo(iy);
+  return -ix.compareTo(iy);
 }
 
 void showSkills(String filt) {
