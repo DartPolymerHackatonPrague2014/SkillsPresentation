@@ -2,10 +2,10 @@
    { 
     "name": "git",
     "tags": ["pull", "merge", "commit"],
-    "knowledge": 100
+    "knowledge": 99
    },
    {
-    "name": "dart",
+    "name": "Dart",
     "tags": ["canvas", "DOM"],
     "knowledge": 50
    },
@@ -13,5 +13,11 @@
     "name": "polymer",
     "tags": ["elements"],
     "knowledge": 75
+   }
+   ,
+   {
+    "name": "Wery wery logn name for skill and it is ok",
+    "tags": ["elements"],
+    "knowledge": 100
    }
 ]

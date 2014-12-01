@@ -49,13 +49,13 @@ void showSkills(String filt) {
     var tagContains = false;
 
     for (var t in e["tags"]) {
-      if (t.toString().contains(filt)) {
+      if (t.toString().toLowerCase().contains(filt.toLowerCase())) {
         tagContains = true;
         break;
       }
     }
 
-    if (e["name"].contains(filt) || tagContains) {
+    if (e["name"].toLowerCase().contains(filt.toLowerCase()) || tagContains) {
       Element container = new Element.tag('div')..attributes = {
             "class": "col-xs-6"
           };
